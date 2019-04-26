@@ -18,8 +18,12 @@ void bubblesort(int arr[],int n){
     }
 }
 int main(){
-  int arr[]={10,91,32,45,78,94,56,43,6,98};
-  int n=sizeof(arr)/sizeof(arr[0]);
+  int arr[10000000];
+  int n;
+  cin>>n;
+  for(int i=0;i<n;i++){
+      cin>>arr[i];
+  }
   bubblesort(arr,n);
   return 0;
 }
