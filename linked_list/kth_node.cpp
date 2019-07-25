@@ -214,12 +214,11 @@ ostream& operator<<(ostream &os,node *head){
 int main() {
     node*head = NULL;
     cin>>head;
-    print(head);
     int k;
     cin>>k;
     //cout<<head<<head1;
     head=find_k(head,k);
-    cout<<head->data;
+    cout<<head->data<<endl;
  //   buildlist(head);
   //  print(head);
     /*insertAtHead(head,5);

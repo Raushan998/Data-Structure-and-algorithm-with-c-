@@ -152,7 +152,7 @@ bool detectcycle(node* head){
      while(fast!=NULL && fast->next!=NULL){
          fast=fast->next->next;
          slow=slow->next;
-         if(fast==slow){
+         if(fast->data==slow->data){
              return true;
          }
      }
@@ -268,7 +268,6 @@ int main() {
   //  node *head1=NULL;
     cin>>head;
     //cout<<head<<head1;
-    head->next->next->head=head;
     if(detectcycle(head)){
          cout<<"linked list is circular"<<endl;
     }

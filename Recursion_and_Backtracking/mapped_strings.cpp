@@ -1,17 +1,31 @@
-#include<iostream>
+#include <iostream>
+#include<cstring>
 using namespace std;
-char spellings[][100]={"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"};
-void print(int num){
-     for(int i=0;i<n;i++){
-         for(int j=0;j<n;j++){
-             for(int k=j;k<i;k++)
-                 cout<<
-         }
-     }
- }
+void printstring(char *num,char *out,int i,int j,int length){
+    if(num[i]=='\0'){
+        out[j]='\0';
+        cout<<out<<endl;
+        return;
+    }
+    int sdigit=num[i]-'0';
+    int ddigit;
+    if(i+1<length){
+        ddigit=(num[i]-'0')*10+(num[i+1]-'0');
+    }
+    else
+        ddigit=sdigit;
+    out[j]=sdigit+64;
+    printstring(num,out,i+1,j+1,length);
+    if(ddigit>9 && ddigit<=26){
+        out[j]=ddigit+64;
+        printstring(num,out,i+2,j+1,length);
+    }
+}
 int main(){
-    int num;
+    char num[10];
+    char outt[10];
     cin>>num;
-    print(num);
+    int len=strlen(num);
+    printstring(num,outt,0,0,len);
     return 0;
 }

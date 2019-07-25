@@ -98,6 +98,9 @@ int main() {
    Complex d1,d2;
    cin>>d1>>d2;
    cout<<d1<<d2;
+   d1+d2;
+   d1.print();
+   d2.print();
 
 
 

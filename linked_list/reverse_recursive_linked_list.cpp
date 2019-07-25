@@ -203,7 +203,6 @@ ostream& operator<<(ostream &os,node *head){
 int main() {
     node*head = NULL;
     cin>>head;
-    print(head);
     //cout<<head<<head1;
     head=reverseRec(head);
     print(head);

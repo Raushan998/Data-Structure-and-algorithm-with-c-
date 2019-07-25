@@ -9,7 +9,9 @@ void printspan(int arr[],int n){
         while(s.empty()==false && arr[s.top()]<currprice){
             s.pop();
         }
+       // cout<<s.top()<<endl;
         int betterDay=s.empty()?0:s.top();
+        cout<<betterDay<<endl;
         int span=day-betterDay;
         ans[day]=span;
         s.push(day);
